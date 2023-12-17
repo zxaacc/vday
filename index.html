@@ -1,0 +1,48 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles/css/index.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="header__text">
+          Can you grant me the wish of being my valentine again this year?
+        </h1>
+      </header>
+
+      <div class="gif_container">
+        <img
+          src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif"
+          alt="cute cat"
+        />
+      </div>
+
+      <div class="buttons">
+        <button class="button" id="yesButton" onclick="nextPage()">Yes</button>
+        <button class="button" id="noButton" onmouseover="moveButton()">
+          No
+        </button>
+      </div>
+      <script>
+        function nextPage() {
+          window.location.href = "yes.html";
+        }
+
+        function moveButton() {
+          var x =
+            Math.random() *
+            (window.innerWidth -
+              document.getElementById("noButton").offsetWidth);
+          var y =
+            Math.random() *
+            (window.innerHeight -
+              document.getElementById("noButton").offsetHeight);
+          document.getElementById("noButton").style.left = `${x}px`;
+          document.getElementById("noButton").style.top = `${y}px`;
+        }
+      </script>
+    </div>
+  </body>
+</html>
